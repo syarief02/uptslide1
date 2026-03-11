@@ -12,6 +12,7 @@ You can view the live presentation here: **[syariefazman.com/uptslide1](https://
 
 ## 🚀 Features
 - **Interactive Navigation**: Navigate through slides using on-screen buttons or keyboard arrows.
-- **Custom UI System**: Clean, modern aesthetics with grid layouts, frosted glass effects, and gradient typography.
-- **Responsive Design**: Designed to scale perfectly for presentation screens.
+- **Responsive Typography**: The base font-size dynamically scales down using media queries to fit desktop, tablets, and mobile phones seamlessly.
+- **Custom UI System**: Clean, modern aesthetics with grid layouts, frosted glass effects, floating molecules, and gradient typography.
+- **Modular Codebase**: Cleanly separated `index.html`, `style.css`, and `script.js` for easy maintainability.
 - **Fullscreen Mode**: Dedicated button for distraction-free viewing.
