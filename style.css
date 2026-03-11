@@ -1203,6 +1203,66 @@ h2 {
   line-height: 1.6
 }
 
+/* ========== ENDING SLIDE ========== */
+.ending-card {
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 22px;
+  background: var(--vision-bg);
+  border: 1px solid var(--vision-border);
+  box-shadow: 0 8px 40px var(--shadow-light);
+}
+
+.ending-icon {
+  font-size: 3.5rem;
+  margin-bottom: .8rem;
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: .85; }
+}
+
+.ending-title {
+  font-size: clamp(2.2rem, 5vw, 3.6rem) !important;
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: .6rem !important;
+  background: linear-gradient(135deg, var(--grad-start), var(--grad-end));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ending-sub {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.ending-divider {
+  width: 80px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--grad-start), var(--grad-end));
+  margin: 0 auto 1.5rem;
+  opacity: .6;
+}
+
+.ending-unit {
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--text-accent);
+  margin-bottom: .3rem;
+}
+
+.ending-date {
+  font-size: .78rem;
+  color: var(--text-muted);
+  font-family: 'JetBrains Mono', monospace;
+}
 /* ========== INTERACTIVE CHARTS ========== */
 .chart-container {
   display: flex;
