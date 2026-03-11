@@ -201,7 +201,7 @@
 
 <div class="topbar">
   <div class="logo">🧪 <span>Unit Penyaringan</span></div>
-  <div class="slide-counter">Slaid <span class="cur" id="curSlide">1</span> / 14</div>
+  <div class="slide-counter">Slaid <span class="cur" id="curSlide">1</span> / 15</div>
 </div>
 
 <div class="scroll-hint" id="sh"><span>Scroll</span><svg viewBox="0 0 24 24"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></div>
@@ -271,25 +271,33 @@
     <h2>Cadangan Penambahan Beban Kerja 2025</h2>
     <p class="sub">Cadangan yang belum dapat dilaksanakan beserta justifikasi penangguhan.</p>
     <div class="glass" style="overflow-x:auto">
-      <table class="tbl">
-        <thead><tr><th style="width:55px">Bil</th><th>Cadangan yang tidak tercapai</th><th>Ulasan</th></tr></thead>
+      <table class="tbl" style="border-collapse:separate;border-spacing:0 6px">
+        <thead><tr><th style="width:55px">Bil</th><th style="width:30%">Cadangan yang tidak tercapai</th><th>Ulasan</th></tr></thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>Penyemak verifikasi alat timbang</td>
-            <td rowspan="3" style="vertical-align:middle;font-size:.88rem;color:#3a5a4a;line-height:1.55;">Fokus dialihkan kepada sesi latihan teknikal bersama pegawai untuk memantapkan prosedur pengendalian alat timbang. Pengurusan suhu dan kebuk wasap yang lebih teliti sebelum pemeriksaan laporan berkala dan rutin dimulakan.</td>
+          <tr style="background:rgba(190,140,30,.06);border-left:4px solid #c89a14">
+            <td style="font-weight:700;border-left:4px solid #c89a14;border-radius:8px 0 0 8px">1</td>
+            <td style="font-weight:600">Penyemak verifikasi alat timbang</td>
+            <td style="font-size:.88rem;color:#3a5a4a;line-height:1.55;border-radius:0 8px 8px 0">Fokus dialihkan kepada sesi latihan teknikal bersama pegawai untuk memantapkan prosedur pengendalian alat timbang sebelum pemeriksaan laporan berkala dimulakan.</td>
           </tr>
-          <tr><td>2</td><td>Penyemak suhu bilik makmal dan fridge</td></tr>
-          <tr><td>3</td><td>Penyemak kebuk wasap</td></tr>
-          <tr>
-            <td>4</td>
-            <td>Column performance</td>
-            <td style="font-size:.88rem;color:#3a5a4a;line-height:1.55;">Ditangguhkan bagi memberi laluan kepada keperluan method transfer dan comparative testing.</td>
+          <tr style="background:rgba(42,170,138,.04);">
+            <td style="font-weight:700;border-left:4px solid #2aaa8a;border-radius:8px 0 0 8px">2</td>
+            <td style="font-weight:600">Penyemak suhu bilik makmal dan fridge</td>
+            <td style="font-size:.88rem;color:#3a5a4a;line-height:1.55;border-radius:0 8px 8px 0">Pengurusan suhu memerlukan pemahaman lebih teliti oleh pegawai. Latihan teknikal pemantauan suhu perlu diselesaikan terlebih dahulu sebelum semakan rutin dimulakan.</td>
           </tr>
-          <tr>
-            <td>5</td>
-            <td>Measurement of Uncertainty</td>
-            <td style="font-size:.88rem;color:#3a5a4a;line-height:1.55;">MU dilaksanakan setiap 2 tahun sekali (terakhir pada 2024).</td>
+          <tr style="background:rgba(190,140,30,.06);">
+            <td style="font-weight:700;border-left:4px solid #c89a14;border-radius:8px 0 0 8px">3</td>
+            <td style="font-weight:600">Penyemak kebuk wasap</td>
+            <td style="font-size:.88rem;color:#3a5a4a;line-height:1.55;border-radius:0 8px 8px 0">Kebuk wasap memerlukan pengurusan yang lebih teliti. Prosedur semakan perlu dimantapkan melalui sesi latihan sebelum pelaksanaan rutin dilakukan.</td>
+          </tr>
+          <tr style="background:rgba(42,170,138,.04);">
+            <td style="font-weight:700;border-left:4px solid #2aaa8a;border-radius:8px 0 0 8px">4</td>
+            <td style="font-weight:600">Column performance</td>
+            <td style="font-size:.88rem;color:#3a5a4a;line-height:1.55;border-radius:0 8px 8px 0">Ditangguhkan bagi memberi laluan kepada keperluan method transfer dan comparative testing yang lebih mendesak. Sumber instrumen HPLC/GC terhad.</td>
+          </tr>
+          <tr style="background:rgba(190,140,30,.06);">
+            <td style="font-weight:700;border-left:4px solid #c89a14;border-radius:8px 0 0 8px">5</td>
+            <td style="font-weight:600">Measurement of Uncertainty</td>
+            <td style="font-size:.88rem;color:#3a5a4a;line-height:1.55;border-radius:0 8px 8px 0">MU dilaksanakan mengikut kitaran setiap 2 tahun sekali. Pengiraan terakhir pada 2024, seterusnya dijadualkan pada tahun 2026.</td>
           </tr>
         </tbody>
       </table>
@@ -565,24 +573,90 @@
   <div class="slide-inner">
     <span class="tag tag-rose">Slaid 14</span>
     <h2>⚠️ Isu & Cabaran 2026</h2>
-    <p class="sub">Halangan utama yang perlu ditangani bagi memastikan kelancaran operasi sepanjang tahun.</p>
+    <p class="sub">Halangan utama yang perlu ditangani bagi memastikan kelancaran operasi sepanjang tahun, beserta impak dan cadangan penyelesaian.</p>
 
-    <div class="ch-item">
-      <span class="ch-num">1</span>
-      <p><strong>Kekangan Perkongsian Instrumen Tunggal</strong> — Ujian Volatile Compound dan EG/DEG berkongsi mesin yang sama namun memerlukan metode serta pertukaran turus (column) yang kerap. Ini mengganggu masa penstabilan (equilibration time) dan memanjangkan tempoh ujian.</p>
+    <div class="ch-item" style="padding:1.5rem 1.8rem">
+      <div style="display:flex;align-items:center;gap:.9rem;margin-bottom:.8rem">
+        <span class="ch-num">1</span>
+        <strong style="font-size:1.05rem;color:#0e2e2e">Kekangan Perkongsian Instrumen Tunggal</strong>
+      </div>
+      <p style="font-size:.92rem;color:#3a2a2a;line-height:1.6;margin-bottom:.8rem">Ujian Volatile Compound dan EG/DEG berkongsi mesin yang sama namun memerlukan metode serta pertukaran turus (column) yang kerap. Ini mengganggu masa penstabilan (equilibration time) dan memanjangkan tempoh ujian.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem">
+        <div style="padding:.8rem 1rem;border-radius:10px;background:rgba(200,70,70,.04);border:1px solid rgba(200,70,70,.1)">
+          <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#aa3a3a;margin-bottom:.35rem">⚡ Impak</div>
+          <p style="font-size:.85rem;color:#3a2a2a;line-height:1.5;margin:0">Kelewatan TAT sehingga 3–5 hari tambahan setiap kali pertukaran metode. Mengurangkan kapasiti analisis harian dan menjejaskan sasaran bilangan sampel tahunan.</p>
+        </div>
+        <div style="padding:.8rem 1rem;border-radius:10px;background:rgba(42,170,138,.04);border:1px solid rgba(42,170,138,.12)">
+          <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#0e5a4a;margin-bottom:.35rem">💡 Cadangan Penyelesaian</div>
+          <p style="font-size:.85rem;color:#2a4a3e;line-height:1.5;margin:0">Permohonan instrumen GC-HS tambahan yang khusus untuk ujian Volatile Compound, atau penjadualan batch analysis mengikut jenis ujian supaya pertukaran turus diminimumkan.</p>
+        </div>
+      </div>
     </div>
-    <div class="ch-item">
-      <span class="ch-num">2</span>
-      <p><strong>Penerimaan Kategori Sampel yang Tidak Sistematik</strong> — Sukar mengatur jadual yang efisien mengikut jenis sampel, kerana peralihan konfigurasi kaedah terpaksa dilakukan secara berterusan bagi memenuhi keperluan ujian yang berbeza-beza.</p>
+
+    <div class="ch-item" style="padding:1.5rem 1.8rem">
+      <div style="display:flex;align-items:center;gap:.9rem;margin-bottom:.8rem">
+        <span class="ch-num">2</span>
+        <strong style="font-size:1.05rem;color:#0e2e2e">Penerimaan Kategori Sampel yang Tidak Sistematik</strong>
+      </div>
+      <p style="font-size:.92rem;color:#3a2a2a;line-height:1.6;margin-bottom:.8rem">Sukar mengatur jadual yang efisien mengikut jenis sampel, kerana peralihan konfigurasi kaedah terpaksa dilakukan secara berterusan bagi memenuhi keperluan ujian yang berbeza-beza.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem">
+        <div style="padding:.8rem 1rem;border-radius:10px;background:rgba(200,70,70,.04);border:1px solid rgba(200,70,70,.1)">
+          <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#aa3a3a;margin-bottom:.35rem">⚡ Impak</div>
+          <p style="font-size:.85rem;color:#3a2a2a;line-height:1.5;margin:0">Masa berlebihan digunakan untuk konfigurasi semula peralatan. Peningkapan risiko kesilapan konfigurasi yang boleh menjejaskan kualiti keputusan analisis.</p>
+        </div>
+        <div style="padding:.8rem 1rem;border-radius:10px;background:rgba(42,170,138,.04);border:1px solid rgba(42,170,138,.12)">
+          <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#0e5a4a;margin-bottom:.35rem">💡 Cadangan Penyelesaian</div>
+          <p style="font-size:.85rem;color:#2a4a3e;line-height:1.5;margin:0">Pelaksanaan sistem penerimaan sampel berkumpulan (batch intake) mengikut kategori ujian. Koordinasi bersama unit penerimaan untuk penjadualan penerimaan sampel yang lebih sistematik.</p>
+        </div>
+      </div>
     </div>
-    <div class="ch-item">
-      <span class="ch-num">3</span>
-      <p><strong>Pengurusan Isu Teknikal Instrumen (Troubleshooting)</strong> — Penganalisis perlu cuba menyelesaikan masalah teknikal instrumen secara kendiri dengan panduan vendor sebelum bantuan luar dipanggil, menyukarkan asimilasi masa dengan tuntutan beban kerja sampel harian.</p>
+
+  </div>
+</section>
+
+<!-- ===== SLIDE 15 — ISU & CABARAN 2026 (sambungan) ===== -->
+<section class="slide" id="s15">
+  <div class="slide-inner">
+    <span class="tag tag-rose">Slaid 15</span>
+    <h2>⚠️ Isu & Cabaran 2026 <span style="font-size:.55em;font-weight:400;color:#5a8a7a">(sambungan)</span></h2>
+    <p class="sub">Cabaran berkaitan pengurusan teknikal dan pembangunan kemahiran pegawai.</p>
+
+    <div class="ch-item" style="padding:1.5rem 1.8rem">
+      <div style="display:flex;align-items:center;gap:.9rem;margin-bottom:.8rem">
+        <span class="ch-num">3</span>
+        <strong style="font-size:1.05rem;color:#0e2e2e">Pengurusan Isu Teknikal Instrumen (Troubleshooting)</strong>
+      </div>
+      <p style="font-size:.92rem;color:#3a2a2a;line-height:1.6;margin-bottom:.8rem">Penganalisis perlu cuba menyelesaikan masalah teknikal instrumen secara kendiri dengan panduan vendor sebelum bantuan luar dipanggil, menyukarkan asimilasi masa dengan tuntutan beban kerja sampel harian.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem">
+        <div style="padding:.8rem 1rem;border-radius:10px;background:rgba(200,70,70,.04);border:1px solid rgba(200,70,70,.1)">
+          <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#aa3a3a;margin-bottom:.35rem">⚡ Impak</div>
+          <p style="font-size:.85rem;color:#3a2a2a;line-height:1.5;margin:0">Downtime instrumen yang berpanjangan (sehingga beberapa hari). Penganalisis terpaksa membahagikan masa antara troubleshooting dan analisis sampel, menjejaskan produktiviti keseluruhan.</p>
+        </div>
+        <div style="padding:.8rem 1rem;border-radius:10px;background:rgba(42,170,138,.04);border:1px solid rgba(42,170,138,.12)">
+          <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#0e5a4a;margin-bottom:.35rem">💡 Cadangan Penyelesaian</div>
+          <p style="font-size:.85rem;color:#2a4a3e;line-height:1.5;margin:0">Penyediaan SOP troubleshooting yang komprehensif bagi setiap instrumen. Latihan berkala bersama vendor dan pelantikan "champion" instrumen dalam kalangan PPF.</p>
+        </div>
+      </div>
     </div>
-    <div class="ch-item">
-      <span class="ch-num">4</span>
-      <p><strong>Keperluan Penguasaan Pelbagai Kaedah Analisis</strong> — Tuntutan untuk mengekalkan tahap kemahiran penganalisis yang tinggi merentasi pelbagai disiplin (contoh: daripada wet chemistry kepada teknik intrustmental) di dalam satu masa melibatkan kepakaran pengendalian bahan kimia dan pelbagai instrumen yang singkat.</p>
+
+    <div class="ch-item" style="padding:1.5rem 1.8rem">
+      <div style="display:flex;align-items:center;gap:.9rem;margin-bottom:.8rem">
+        <span class="ch-num">4</span>
+        <strong style="font-size:1.05rem;color:#0e2e2e">Keperluan Penguasaan Pelbagai Kaedah Analisis</strong>
+      </div>
+      <p style="font-size:.92rem;color:#3a2a2a;line-height:1.6;margin-bottom:.8rem">Tuntutan untuk mengekalkan tahap kemahiran penganalisis yang tinggi merentasi pelbagai disiplin (contoh: daripada wet chemistry kepada teknik instrumental) di dalam satu masa melibatkan kepakaran pengendalian bahan kimia dan pelbagai instrumen yang singkat.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem">
+        <div style="padding:.8rem 1rem;border-radius:10px;background:rgba(200,70,70,.04);border:1px solid rgba(200,70,70,.1)">
+          <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#aa3a3a;margin-bottom:.35rem">⚡ Impak</div>
+          <p style="font-size:.85rem;color:#3a2a2a;line-height:1.5;margin:0">Risiko ketidakseragaman kemahiran antara pegawai. Kebergantungan tinggi kepada individu tertentu bagi kaedah tertentu, menimbulkan masalah apabila berlaku cuti atau pertukaran kakitangan.</p>
+        </div>
+        <div style="padding:.8rem 1rem;border-radius:10px;background:rgba(42,170,138,.04);border:1px solid rgba(42,170,138,.12)">
+          <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#0e5a4a;margin-bottom:.35rem">💡 Cadangan Penyelesaian</div>
+          <p style="font-size:.85rem;color:#2a4a3e;line-height:1.5;margin:0">Pelaksanaan program latihan silang (cross-training) secara berstruktur. Setiap PPF disasarkan menguasai minimum 3 kaedah analisis utama. Penyediaan matriks kompetensi sebagai alat pemantauan.</p>
+        </div>
+      </div>
     </div>
+
   </div>
 </section>
 
