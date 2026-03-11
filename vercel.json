@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?!(syariefazman\\.com)).*"
+        }
+      ],
+      "destination": "https://syariefazman.com/uptslide1/$1",
+      "permanent": false
+    }
+  ]
+}
