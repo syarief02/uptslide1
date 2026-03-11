@@ -16,6 +16,9 @@
 
   <body>
 
+    <!-- Canvas particle background -->
+    <canvas id="particleCanvas"></canvas>
+
     <!-- Science background layers -->
     <div class="bg-layer"></div>
     <div class="bg-hex"></div>
@@ -131,7 +134,14 @@
 
     <div class="topbar">
       <div class="logo">🧪 <span>Unit Penyaringan - Tradisional</span></div>
-      <div class="slide-counter">Slaid <span class="cur" id="curSlide">1</span> / 15</div>
+      <div class="topbar-right">
+        <div class="slide-counter">Slaid <span class="cur" id="curSlide">1</span> / 15</div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <div class="toggle-thumb">
+            <span id="themeIcon">☀️</span>
+          </div>
+        </button>
+      </div>
     </div>
 
     <div class="scroll-hint" id="sh"><span>Scroll</span><svg viewBox="0 0 24 24">
@@ -142,7 +152,7 @@
     <main>
 
       <!-- ===== SLIDE 1 — COVER ===== -->
-      <section class="slide" id="s1">
+      <section class="slide anim-scale" id="s1">
         <div class="slide-inner hero">
           <div class="hero-label"><svg viewBox="0 0 24 24">
               <path
@@ -162,59 +172,67 @@
                 <circle cx="9" cy="7" r="4" />
                 <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
                 <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-              </svg>8 Ahli Pasukan</div>
+              </svg><span class="counter" data-target="8">0</span> Ahli Pasukan</div>
             <div class="chip"><svg viewBox="0 0 24 24">
                 <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-              </svg>15 Slaid</div>
+              </svg><span class="counter" data-target="15">0</span> Slaid</div>
           </div>
         </div>
       </section>
 
       <!-- ===== SLIDE 2 — BEST OUR TEAM ===== -->
-      <section class="slide" id="s2">
+      <section class="slide anim-blur" id="s2">
         <div class="slide-inner">
           <span class="tag tag-cyan">Slaid 02</span>
           <h2>Best Our Team 🧬</h2>
           <p class="sub">Barisan penganalisa Unit Penyaringan yang berdedikasi dalam memastikan kualiti analisis yang
             terbaik.</p>
-          <div class="team-grid">
+          <div class="team-grid stagger">
             <div class="tm">
-              <div class="tm-img"><img src="av_siti.png" alt="Siti" /></div>
+              <div class="tm-img"><img data-src="av_siti.png" alt="Siti" width="90" height="90"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" /></div>
               <div class="tname">Siti</div>
               <div class="trole">PPF Makmal</div>
             </div>
             <div class="tm">
-              <div class="tm-img"><img src="av_khairi.png" alt="Khairi" /></div>
+              <div class="tm-img"><img data-src="av_khairi.png" alt="Khairi" width="90" height="90"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" /></div>
               <div class="tname">Khairi</div>
               <div class="trole">PPF Makmal</div>
             </div>
             <div class="tm">
-              <div class="tm-img"><img src="av_syikin.png" alt="Syikin" /></div>
+              <div class="tm-img"><img data-src="av_syikin.png" alt="Syikin" width="90" height="90"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" /></div>
               <div class="tname">Syikin</div>
               <div class="trole">PPF Makmal</div>
             </div>
             <div class="tm">
-              <div class="tm-img"><img src="av_adi.png" alt="Adi" /></div>
+              <div class="tm-img"><img data-src="av_adi.png" alt="Adi" width="90" height="90"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" /></div>
               <div class="tname">Adi</div>
               <div class="trole">PPF Makmal</div>
             </div>
             <div class="tm">
-              <div class="tm-img"><img src="av_feeka.png" alt="Feeka" /></div>
+              <div class="tm-img"><img data-src="av_feeka.png" alt="Feeka" width="90" height="90"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" /></div>
               <div class="tname">Feeka</div>
               <div class="trole">PPF Makmal</div>
             </div>
             <div class="tm">
-              <div class="tm-img"><img src="av_joe.png" alt="Joe" /></div>
+              <div class="tm-img"><img data-src="av_joe.png" alt="Joe" width="90" height="90"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" /></div>
               <div class="tname">Joe</div>
               <div class="trole">PPF Makmal</div>
             </div>
             <div class="tm">
-              <div class="tm-img"><img src="av_syed.png" alt="Syed" /></div>
+              <div class="tm-img"><img data-src="av_syed.png" alt="Syed" width="90" height="90"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" /></div>
               <div class="tname">Syed</div>
               <div class="trole">PPF Makmal</div>
             </div>
             <div class="tm">
-              <div class="tm-img"><img src="av_intan.png" alt="Intan" /></div>
+              <div class="tm-img"><img data-src="av_intan.png" alt="Intan" width="90" height="90"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" /></div>
               <div class="tname">Intan</div>
               <div class="trole">PPF Makmal</div>
             </div>
@@ -223,7 +241,7 @@
       </section>
 
       <!-- ===== SLIDE 3 — CADANGAN PENAMBAHAN BEBAN KERJA 2025 ===== -->
-      <section class="slide" id="s3">
+      <section class="slide anim-left" id="s3">
         <div class="slide-inner">
           <span class="tag tag-teal">Slaid 03</span>
           <h2>Cadangan Penambahan Beban Kerja 2025</h2>
@@ -275,7 +293,7 @@
       </section>
 
       <!-- ===== SLIDE 4 — CADANGAN TIDAK TERCAPAI ===== -->
-      <section class="slide" id="s4">
+      <section class="slide anim-right" id="s4">
         <div class="slide-inner">
           <span class="tag tag-amber">Slaid 04</span>
           <h2>Cadangan Penambahan Beban Kerja 2025</h2>
@@ -297,7 +315,7 @@
                   <td style="font-weight:600;border-bottom:2px solid rgba(42,138,122,.12)">Penyemak verifikasi alat
                     timbang</td>
                   <td rowspan="3"
-                    style="vertical-align:middle;font-size:.88rem;color:#3a5a4a;line-height:1.55;border-left:3px solid rgba(42,170,138,.2);padding-left:1.3rem;border-radius:0 8px 8px 0">
+                    style="vertical-align:middle;font-size:.88rem;color:var(--text-secondary);line-height:1.55;border-left:3px solid rgba(42,170,138,.2);padding-left:1.3rem;border-radius:0 8px 8px 0">
                     Fokus dialihkan kepada sesi latihan teknikal bersama pegawai bagi memantapkan prosedur pengendalian
                     alat timbang, pemantauan suhu serta kebuk wasap secara lebih sistematik sebelum pemeriksaan laporan
                     berkala dan rutin dimulakan.</td>
@@ -321,14 +339,15 @@
                   </td>
                   <td style="font-weight:600;border-bottom:2px solid rgba(42,138,122,.12)">Column performance</td>
                   <td
-                    style="font-size:.88rem;color:#3a5a4a;line-height:1.55;border-bottom:2px solid rgba(42,138,122,.12)">
+                    style="font-size:.88rem;color:var(--text-secondary);line-height:1.55;border-bottom:2px solid rgba(42,138,122,.12)">
                     Ditangguhkan bagi memberi laluan kepada aktiviti method transfer dan comparative testing yang lebih
                     mendesak pada tahun tersebut.</td>
                 </tr>
                 <tr style="background:rgba(190,140,30,.06)">
                   <td style="font-weight:700;border-left:4px solid #c89a14;border-radius:0 0 0 8px">5</td>
                   <td style="font-weight:600">Measurement of Uncertainty</td>
-                  <td style="font-size:.88rem;color:#3a5a4a;line-height:1.55;border-radius:0 0 8px 0">MU dilaksanakan
+                  <td style="font-size:.88rem;color:var(--text-secondary);line-height:1.55;border-radius:0 0 8px 0">MU
+                    dilaksanakan
                     mengikut kitaran setiap 2 tahun sekali. Pengiraan terakhir pada tahun 2024, seterusnya dijadualkan
                     pada 2026.</td>
                 </tr>
@@ -344,7 +363,7 @@
           <span class="tag tag-teal">Slaid 05</span>
           <h2>Penambahan Beban Kerja 2025</h2>
           <p class="sub">Skop penambahan beban kerja baharu yang telah diperkenalkan kepada unit.</p>
-          <div class="g4">
+          <div class="g4 stagger">
             <div class="fcard">
               <div class="fc-icon">🔬</div>
               <div class="fc-title">Ujian Kestabilan Larutan Piawai Rujukan (HPLC)</div>
@@ -384,7 +403,7 @@
       </section>
 
       <!-- ===== SLIDE 6 — WAWASAN STRATEGIK 2026 ===== -->
-      <section class="slide" id="s6">
+      <section class="slide anim-scale" id="s6">
         <div class="slide-inner">
           <div class="vision-card">
             <div class="v-icon">🔭</div>
@@ -397,54 +416,107 @@
       </section>
 
       <!-- ===== SLIDE 7 — SASARAN 2026 : JENIS UJIAN / TAT ===== -->
-      <section class="slide" id="s7">
+      <section class="slide anim-left" id="s7">
         <div class="slide-inner">
           <span class="tag tag-rose">Slaid 07</span>
           <h2>Sasaran 2026</h2>
           <p class="sub">1. Jenis-jenis ujian yang dijalankan — RBPQM bermula 1<sup>st</sup> touch analysis di makmal.
           </p>
-          <div class="tat-row">
-            <div class="dot dot-blue"></div>
-            <div class="tat-body">
-              <div class="lbl">i. Surv Khas</div>
-              <div class="desc">45 hari bekerja bermula hari makmal terima sampel</div>
+          <div class="stagger">
+            <div class="tat-row">
+              <div class="dot dot-blue"></div>
+              <div class="tat-body">
+                <div class="lbl">i. Surv Khas</div>
+                <div class="desc">45 hari bekerja bermula hari makmal terima sampel</div>
+              </div>
+              <div class="tat-days"><span class="counter" data-target="45">0</span> <small>hari</small></div>
             </div>
-            <div class="tat-days">45 <small>hari</small></div>
-          </div>
-          <div class="tat-row">
-            <div class="dot dot-pink"></div>
-            <div class="tat-body">
-              <div class="lbl">ii. Pink – CPF</div>
-              <div class="desc">45 hari bekerja bermula dari hari makmal terima sampel</div>
+            <div class="tat-row">
+              <div class="dot dot-pink"></div>
+              <div class="tat-body">
+                <div class="lbl">ii. Pink – CPF</div>
+                <div class="desc">45 hari bekerja bermula dari hari makmal terima sampel</div>
+              </div>
+              <div class="tat-days"><span class="counter" data-target="45">0</span> <small>hari</small></div>
             </div>
-            <div class="tat-days">45 <small>hari</small></div>
-          </div>
-          <div class="tat-row">
-            <div class="dot dot-red"></div>
-            <div class="tat-body">
-              <div class="lbl">iii. Merah – Aduan</div>
-              <div class="desc">30 hari bekerja bermula dari hari makmal terima sampel</div>
+            <div class="tat-row">
+              <div class="dot dot-red"></div>
+              <div class="tat-body">
+                <div class="lbl">iii. Merah – Aduan</div>
+                <div class="desc">30 hari bekerja bermula dari hari makmal terima sampel</div>
+              </div>
+              <div class="tat-days"><span class="counter" data-target="30">0</span> <small>hari</small></div>
             </div>
-            <div class="tat-days">30 <small>hari</small></div>
-          </div>
-          <div class="tat-row">
-            <div class="dot dot-orange"></div>
-            <div class="tat-body">
-              <div class="lbl">iv. Oren – ADR</div>
-              <div class="desc">30 hari bekerja bermula dari hari makmal terima sampel</div>
+            <div class="tat-row">
+              <div class="dot dot-orange"></div>
+              <div class="tat-body">
+                <div class="lbl">iv. Oren – ADR</div>
+                <div class="desc">30 hari bekerja bermula dari hari makmal terima sampel</div>
+              </div>
+              <div class="tat-days"><span class="counter" data-target="30">0</span> <small>hari</small></div>
             </div>
-            <div class="tat-days">30 <small>hari</small></div>
           </div>
         </div>
       </section>
 
-      <!-- ===== SLIDE 8 — SASARAN 2026 : SAMPEL CPF ===== -->
-      <section class="slide" id="s8">
+      <!-- ===== SLIDE 8 — SASARAN 2026 : SAMPEL CPF (BAR CHART + TABLE) ===== -->
+      <section class="slide anim-right" id="s8">
         <div class="slide-inner">
           <span class="tag tag-cyan">Slaid 08</span>
           <h2>Sasaran 2026</h2>
           <p class="sub">2. Sampel CPF — Bilangan sampel mengikut kategori produk bagi Unit Penyaringan.</p>
-          <div class="glass" style="overflow-x:auto">
+          <div class="glass">
+            <!-- Interactive Bar Chart -->
+            <div class="chart-container">
+              <div class="chart-bar-group">
+                <div class="chart-bar-track">
+                  <div class="chart-bar" data-height="0.43"
+                    style="background: linear-gradient(180deg, #2aa0c8, rgba(42, 160, 200, .5))">
+                    <span class="chart-val counter" data-target="2">0</span>
+                  </div>
+                </div>
+                <div class="chart-label">D020-25</div>
+              </div>
+              <div class="chart-bar-group">
+                <div class="chart-bar-track">
+                  <div class="chart-bar" data-height="0.22"
+                    style="background: linear-gradient(180deg, #d06a9a, rgba(208, 106, 154, .5))">
+                    <span class="chart-val counter" data-target="1">0</span>
+                  </div>
+                </div>
+                <div class="chart-label">CPF WP</div>
+              </div>
+              <div class="chart-bar-group">
+                <div class="chart-bar-track">
+                  <div class="chart-bar" data-height="1.3"
+                    style="background: linear-gradient(180deg, #c88514, rgba(200, 133, 20, .5))">
+                    <span class="chart-val counter" data-target="6">0</span>
+                  </div>
+                </div>
+                <div class="chart-label">P085-25</div>
+              </div>
+              <div class="chart-bar-group">
+                <div class="chart-bar-track">
+                  <div class="chart-bar" data-height="100"
+                    style="background: linear-gradient(180deg, #1a8a6a, rgba(42, 170, 138, .5))">
+                    <span class="chart-val counter" data-target="462">0</span>
+                  </div>
+                </div>
+                <div class="chart-label">P088-25</div>
+              </div>
+              <div class="chart-bar-group">
+                <div class="chart-bar-track">
+                  <div class="chart-bar" data-height="20.6"
+                    style="background: linear-gradient(180deg, #5a3a9a, rgba(100, 70, 180, .5))">
+                    <span class="chart-val counter" data-target="95">0</span>
+                  </div>
+                </div>
+                <div class="chart-label">P087-25</div>
+              </div>
+            </div>
+          </div>
+          <!-- Original detailed table -->
+          <div class="glass" style="overflow-x:auto;margin-top:1.5rem">
             <table class="tbl">
               <thead>
                 <tr>
@@ -485,63 +557,94 @@
         </div>
       </section>
 
-      <!-- ===== SLIDE 9 — SASARAN 2026 : KUANTITI SAMPLE ===== -->
-      <section class="slide" id="s9">
+      <!-- ===== SLIDE 9 — SASARAN 2026 : KUANTITI SAMPLE (DONUT + TABLE SIDE-BY-SIDE) ===== -->
+      <section class="slide anim-blur" id="s9">
         <div class="slide-inner">
           <span class="tag tag-teal">Slaid 09</span>
           <h2>Sasaran 2026</h2>
           <p class="sub">Jenis sampel dan kuantiti yang disasarkan untuk dianalisis.</p>
-          <div class="glass" style="overflow-x:auto">
-            <table class="tbl">
-              <thead>
-                <tr>
-                  <th>Bil</th>
-                  <th>Jenis Sampel</th>
-                  <th>Kuantiti Sampel</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>3</td>
-                  <td>2<sup>nd</sup> analyst sample CPF</td>
-                  <td><span class="badge">2</span></td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Produk yang mengandungi bahan aktif Kumpulan Sartan, Metformin, dan Ranitidine<br /><em
-                      style="color:#1a7a5a">(Pengujian impurities NDMA/NDEA)</em></td>
-                  <td><span class="badge">76</span></td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>Produk cecair oral yang berisiko mengandungi EG/DEG</td>
-                  <td><span class="badge">121</span></td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>Produk yang mengandungi Red Yeast Rice<br /><em style="color:#1a7a5a">(pengujian penentuan
-                      kandungan lovastatin)</em></td>
-                  <td><span class="badge">40</span></td>
-                </tr>
-                <tr>
-                  <td>7</td>
-                  <td>Produk dari pengilang dengan isu kawalan kualiti (input dari SAPB/SVA)<br /><em
-                      style="color:#1a7a5a">(pengujian penuh)</em></td>
-                  <td><span class="badge">148</span></td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="glass donut-table-layout">
+            <!-- Donut chart on the left -->
+            <div class="donut-side">
+              <div class="donut-container">
+                <svg class="donut-svg" viewBox="0 0 200 200">
+                  <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(42,170,138,.06)" stroke-width="28" />
+                  <circle class="donut-circle" cx="100" cy="100" r="80" stroke="#2aa0c8" stroke-dasharray="502.65"
+                    stroke-dashoffset="502.65" data-target-offset="500.04" />
+                  <circle class="donut-circle" cx="100" cy="100" r="80" stroke="#d06a9a" stroke-dasharray="502.65"
+                    stroke-dashoffset="502.65" data-target-offset="404.13"
+                    style="stroke-dasharray: 502.65; transform: rotate(1.87deg); transform-origin: center;" />
+                  <circle class="donut-circle" cx="100" cy="100" r="80" stroke="#c88514" stroke-dasharray="502.65"
+                    stroke-dashoffset="502.65" data-target-offset="345.47"
+                    style="transform: rotate(72.28deg); transform-origin: center;" />
+                  <circle class="donut-circle" cx="100" cy="100" r="80" stroke="#1a8a6a" stroke-dasharray="502.65"
+                    stroke-dashoffset="502.65" data-target-offset="450.7"
+                    style="transform: rotate(184.94deg); transform-origin: center;" />
+                  <circle class="donut-circle" cx="100" cy="100" r="80" stroke="#5a3a9a" stroke-dasharray="502.65"
+                    stroke-dashoffset="502.65" data-target-offset="310.44"
+                    style="transform: rotate(222.14deg); transform-origin: center;" />
+                </svg>
+              </div>
+            </div>
+            <!-- Table with color column on the right -->
+            <div class="table-side">
+              <table class="tbl">
+                <thead>
+                  <tr>
+                    <th style="width:32px"></th>
+                    <th>Bil</th>
+                    <th>Jenis Sampel</th>
+                    <th>Kuantiti</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="color-dot" style="background:#2aa0c8"></span></td>
+                    <td>3</td>
+                    <td>2<sup>nd</sup> analyst sample CPF</td>
+                    <td><span class="badge counter" data-target="2">0</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="color-dot" style="background:#d06a9a"></span></td>
+                    <td>4</td>
+                    <td>Produk yang mengandungi bahan aktif Kumpulan Sartan, Metformin, dan Ranitidine<br /><em
+                        style="color:var(--accent)">(Pengujian impurities NDMA/NDEA)</em></td>
+                    <td><span class="badge counter" data-target="76">0</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="color-dot" style="background:#c88514"></span></td>
+                    <td>5</td>
+                    <td>Produk cecair oral yang berisiko mengandungi EG/DEG</td>
+                    <td><span class="badge counter" data-target="121">0</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="color-dot" style="background:#1a8a6a"></span></td>
+                    <td>6</td>
+                    <td>Produk yang mengandungi Red Yeast Rice<br /><em style="color:var(--accent)">(pengujian penentuan
+                        kandungan lovastatin)</em></td>
+                    <td><span class="badge counter" data-target="40">0</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="color-dot" style="background:#5a3a9a"></span></td>
+                    <td>7</td>
+                    <td>Produk dari pengilang dengan isu kawalan kualiti (input dari SAPB/SVA)<br /><em
+                        style="color:var(--accent)">(pengujian penuh)</em></td>
+                    <td><span class="badge counter" data-target="148">0</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- ===== SLIDE 10 — TRANSFER METHOD NDMA & NDEA ===== -->
-      <section class="slide" id="s10">
+      <section class="slide anim-left" id="s10">
         <div class="slide-inner">
           <span class="tag tag-purple">Slaid 10</span>
           <h2>Sasaran 2026</h2>
-          <p class="sub">8. Transfer Method : NDMA & NDEA — Agihan tugasan kepada pegawai.</p>
-          <div class="glass">
+          <p class="sub">8. Transfer Method : NDMA & NDEA — Agihan tugasan kepada penganalisa.</p>
+          <div class="glass stagger">
             <div class="tm-row"><strong>i.</strong>&nbsp; Identification of NDMA & NDEA in Valsartan – <strong
                 class="name">Feeka</strong></div>
             <div class="tm-row"><strong>ii.</strong>&nbsp; Identification of NDMA & NDEA in Losartan, Telmisartan &
@@ -558,12 +661,12 @@
       </section>
 
       <!-- ===== SLIDE 11 — SASARAN 2026 : ITEMS 9-11 ===== -->
-      <section class="slide" id="s11">
+      <section class="slide anim-rotate" id="s11">
         <div class="slide-inner">
           <span class="tag tag-green">Slaid 11</span>
           <h2>Sasaran 2026</h2>
           <p class="sub">Sasaran tambahan (9–11) bagi meningkatkan kecekapan operasi makmal.</p>
-          <div class="g3">
+          <div class="g3 stagger">
             <div class="fcard">
               <div class="fc-icon">🔄</div>
               <div class="fc-title">9. Transfer Method Volatile Compound</div>
@@ -595,13 +698,13 @@
           <span class="tag tag-green">Slaid 12</span>
           <h2>Sasaran 2026</h2>
           <p class="sub">Pemeriksaan berkala peralatan makmal (12–15).</p>
-          <div class="g4">
+          <div class="g4 stagger">
             <div class="fcard">
               <div class="fc-icon">⚖️</div>
               <div class="fc-title">12. Daily Check Alat Penimbang</div>
               <ul>
                 <li>Dijalankan setiap hari</li>
-                <li>3 alat penimbang</li>
+                <li><span class="counter" data-target="3">0</span> alat penimbang</li>
                 <li>Dilakukan mengikut giliran</li>
               </ul>
             </div>
@@ -610,7 +713,7 @@
               <div class="fc-title">13. Sensitivity Alat Penimbang</div>
               <ul>
                 <li>Sebulan sekali</li>
-                <li>3 alat penimbang</li>
+                <li><span class="counter" data-target="3">0</span> alat penimbang</li>
                 <li>Dilakukan mengikut giliran</li>
               </ul>
             </div>
@@ -619,7 +722,7 @@
               <div class="fc-title">14. Repeatability Alat Penimbang</div>
               <ul>
                 <li>3 bulan sekali</li>
-                <li>3 alat penimbang</li>
+                <li><span class="counter" data-target="3">0</span> alat penimbang</li>
                 <li>Dilakukan mengikut giliran</li>
               </ul>
             </div>
@@ -628,7 +731,7 @@
               <div class="fc-title">15. Daily Check Suhu</div>
               <ul>
                 <li>2 kali sehari (AM & PM)</li>
-                <li>5 check point & 2 fridge</li>
+                <li><span class="counter" data-target="5">0</span> check point & 2 fridge</li>
                 <li>Dilakukan mengikut giliran</li>
               </ul>
             </div>
@@ -637,18 +740,18 @@
       </section>
 
       <!-- ===== SLIDE 13 — SASARAN 2026 : ITEMS 16-18 ===== -->
-      <section class="slide" id="s13">
+      <section class="slide anim-left" id="s13">
         <div class="slide-inner">
           <span class="tag tag-green">Slaid 13</span>
           <h2>Sasaran 2026</h2>
           <p class="sub">Verifikasi peralatan dan ujian kestabilan (16–18).</p>
-          <div class="g3">
+          <div class="g3 stagger">
             <div class="fcard">
               <div class="fc-icon">💉</div>
               <div class="fc-title">16. Verifikasi Micropipette</div>
               <ul>
                 <li>3 bulan sekali</li>
-                <li>3 micropipette</li>
+                <li><span class="counter" data-target="3">0</span> micropipette</li>
                 <li>Dilakukan mengikut giliran</li>
               </ul>
             </div>
@@ -657,7 +760,8 @@
               <div class="fc-title">17. Verifikasi Volumetric Flask</div>
               <ul>
                 <li>3 tahun sekali</li>
-                <li>Verifikasi teknikal bagi 100 unit kelalang volumetrik baharu</li>
+                <li>Verifikasi teknikal bagi <span class="counter" data-target="100">0</span> unit kelalang volumetrik
+                  baharu</li>
                 <li>Melibatkan komitmen semua Penolong Pegawai Farmasi (PPF) makmal</li>
               </ul>
             </div>
@@ -677,46 +781,43 @@
       </section>
 
       <!-- ===== SLIDE 14 — ISU & CABARAN 2026 ===== -->
-      <section class="slide" id="s14">
+      <section class="slide anim-right" id="s14">
         <div class="slide-inner">
           <span class="tag tag-rose">Slaid 14</span>
           <h2>⚠️ Isu & Cabaran 2026</h2>
           <p class="sub">Halangan utama yang perlu ditangani bagi memastikan kelancaran operasi sepanjang tahun, beserta
             impak dan cadangan penyelesaian.</p>
 
-          <div class="ch-item" style="padding:1.5rem 1.8rem">
-            <div style="display:flex;align-items:center;gap:.9rem;margin-bottom:.8rem">
+          <div class="ch-item" style="padding:.8rem 1.2rem">
+            <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:.4rem">
               <span class="ch-num">1</span>
-              <strong style="font-size:1.05rem;color:#0e2e2e">Kekangan Perkongsian Instrumen Tunggal</strong>
+              <strong style="font-size:.88rem;color:var(--text-primary)">Kekangan Perkongsian Instrumen Tunggal</strong>
             </div>
-            <p style="font-size:.92rem;color:#3a2a2a;line-height:1.6;margin-bottom:.8rem">Ujian Volatile Compound dan
+            <p style="font-size:.78rem;color:var(--challenge-text);line-height:1.45;margin-bottom:.4rem">Ujian Volatile
+              Compound dan
               EG/DEG berkongsi mesin yang sama namun memerlukan metode serta pertukaran turus (column) yang kerap. Ini
               mengganggu masa penstabilan (equilibration time) dan memanjangkan tempoh ujian.</p>
-            <div
-              style="padding:.8rem 1rem;border-radius:10px;background:rgba(200,70,70,.04);border:1px solid rgba(200,70,70,.1)">
-              <div
-                style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#aa3a3a;margin-bottom:.35rem">
-                ⚡ Impak</div>
-              <p style="font-size:.85rem;color:#3a2a2a;line-height:1.5;margin:0">Kelewatan Turnaround Time (TAT)
+            <div class="ch-impact">
+              <div class="ch-impact-label">⚡ Impak</div>
+              <p>Kelewatan Turnaround Time (TAT)
                 sehingga 3–5 hari tambahan setiap kali pertukaran metode. Mengurangkan kapasiti analisis harian dan
                 menjejaskan sasaran bilangan sampel tahunan.</p>
             </div>
           </div>
 
-          <div class="ch-item" style="padding:1.5rem 1.8rem">
-            <div style="display:flex;align-items:center;gap:.9rem;margin-bottom:.8rem">
+          <div class="ch-item" style="padding:.8rem 1.2rem">
+            <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:.4rem">
               <span class="ch-num">2</span>
-              <strong style="font-size:1.05rem;color:#0e2e2e">Penerimaan Kategori Sampel yang Tidak Sistematik</strong>
+              <strong style="font-size:.88rem;color:var(--text-primary)">Penerimaan Kategori Sampel yang Tidak
+                Sistematik</strong>
             </div>
-            <p style="font-size:.92rem;color:#3a2a2a;line-height:1.6;margin-bottom:.8rem">Sukar mengatur jadual yang
+            <p style="font-size:.78rem;color:var(--challenge-text);line-height:1.45;margin-bottom:.4rem">Sukar mengatur
+              jadual yang
               efisien mengikut jenis sampel, kerana peralihan konfigurasi kaedah terpaksa dilakukan secara berterusan
               bagi memenuhi keperluan ujian yang berbeza-beza.</p>
-            <div
-              style="padding:.8rem 1rem;border-radius:10px;background:rgba(200,70,70,.04);border:1px solid rgba(200,70,70,.1)">
-              <div
-                style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#aa3a3a;margin-bottom:.35rem">
-                ⚡ Impak</div>
-              <p style="font-size:.85rem;color:#3a2a2a;line-height:1.5;margin:0">Masa berlebihan digunakan untuk
+            <div class="ch-impact">
+              <div class="ch-impact-label">⚡ Impak</div>
+              <p>Masa berlebihan digunakan untuk
                 konfigurasi semula peralatan. Peningkapan risiko kesilapan konfigurasi yang boleh menjejaskan kualiti
                 keputusan analisis.</p>
             </div>
@@ -726,48 +827,47 @@
       </section>
 
       <!-- ===== SLIDE 15 — ISU & CABARAN 2026 (sambungan) ===== -->
-      <section class="slide" id="s15">
+      <section class="slide anim-rotate" id="s15">
         <div class="slide-inner">
           <span class="tag tag-rose">Slaid 15</span>
-          <h2>⚠️ Isu & Cabaran 2026 <span style="font-size:.55em;font-weight:400;color:#5a8a7a">(sambungan)</span></h2>
-          <p class="sub">Cabaran berkaitan pengurusan teknikal dan pembangunan kemahiran pegawai.</p>
+          <h2>⚠️ Isu & Cabaran 2026 <span
+              style="font-size:.55em;font-weight:400;color:var(--text-muted)">(sambungan)</span></h2>
+          <p class="sub">Cabaran berkaitan pengurusan teknikal dan pembangunan kemahiran penganalisa.</p>
 
-          <div class="ch-item" style="padding:1.5rem 1.8rem">
-            <div style="display:flex;align-items:center;gap:.9rem;margin-bottom:.8rem">
+          <div class="ch-item" style="padding:.8rem 1.2rem">
+            <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:.4rem">
               <span class="ch-num">3</span>
-              <strong style="font-size:1.05rem;color:#0e2e2e">Pengurusan Isu Teknikal Instrumen
+              <strong style="font-size:.88rem;color:var(--text-primary)">Pengurusan Isu Teknikal Instrumen
                 (Troubleshooting)</strong>
             </div>
-            <p style="font-size:.92rem;color:#3a2a2a;line-height:1.6;margin-bottom:.8rem">Penganalisis perlu cuba
+            <p style="font-size:.78rem;color:var(--challenge-text);line-height:1.45;margin-bottom:.4rem">Penganalisis
+              perlu cuba
               menyelesaikan masalah teknikal instrumen secara kendiri dengan panduan vendor sebelum bantuan luar
               dipanggil, menyukarkan asimilasi masa dengan tuntutan beban kerja sampel harian.</p>
-            <div
-              style="padding:.8rem 1rem;border-radius:10px;background:rgba(200,70,70,.04);border:1px solid rgba(200,70,70,.1)">
-              <div
-                style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#aa3a3a;margin-bottom:.35rem">
-                ⚡ Impak</div>
-              <p style="font-size:.85rem;color:#3a2a2a;line-height:1.5;margin:0">Downtime instrumen yang berpanjangan
+            <div class="ch-impact">
+              <div class="ch-impact-label">⚡ Impak</div>
+              <p>Downtime instrumen yang berpanjangan
                 (sehingga beberapa hari). Penganalisis terpaksa membahagikan masa antara troubleshooting dan analisis
                 sampel, menjejaskan produktiviti keseluruhan.</p>
             </div>
           </div>
 
-          <div class="ch-item" style="padding:1.5rem 1.8rem">
-            <div style="display:flex;align-items:center;gap:.9rem;margin-bottom:.8rem">
+          <div class="ch-item" style="padding:.8rem 1.2rem">
+            <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:.4rem">
               <span class="ch-num">4</span>
-              <strong style="font-size:1.05rem;color:#0e2e2e">Keperluan Penguasaan Pelbagai Kaedah Analisis</strong>
+              <strong style="font-size:.88rem;color:var(--text-primary)">Keperluan Penguasaan Pelbagai Kaedah
+                Analisis</strong>
             </div>
-            <p style="font-size:.92rem;color:#3a2a2a;line-height:1.6;margin-bottom:.8rem">Tuntutan untuk mengekalkan
+            <p style="font-size:.78rem;color:var(--challenge-text);line-height:1.45;margin-bottom:.4rem">Tuntutan untuk
+              mengekalkan
               tahap kemahiran penganalisis yang tinggi merentasi pelbagai disiplin (contoh: daripada wet chemistry
               kepada teknik instrumental) di dalam satu masa melibatkan kepakaran pengendalian bahan kimia dan pelbagai
               instrumen yang singkat.</p>
-            <div
-              style="padding:.8rem 1rem;border-radius:10px;background:rgba(200,70,70,.04);border:1px solid rgba(200,70,70,.1)">
-              <div
-                style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#aa3a3a;margin-bottom:.35rem">
-                ⚡ Impak</div>
-              <p style="font-size:.85rem;color:#3a2a2a;line-height:1.5;margin:0">Risiko ketidakseragaman kemahiran
-                antara pegawai. Kebergantungan tinggi kepada individu tertentu bagi kaedah tertentu, menimbulkan masalah
+            <div class="ch-impact">
+              <div class="ch-impact-label">⚡ Impak</div>
+              <p>Risiko ketidakseragaman kemahiran
+                antara penganalisa. Kebergantungan tinggi kepada individu tertentu bagi kaedah tertentu, menimbulkan
+                masalah
                 apabila berlaku cuti atau pertukaran kakitangan.</p>
             </div>
           </div>
