@@ -1021,12 +1021,15 @@ h2 {
 
 /* ========== TEAM ========== */
 .team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-  gap: .8rem
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem 1rem;
 }
 
 .tm {
+  width: 135px;
+  flex: 0 0 auto;
   text-align: center;
   padding: 1rem .6rem;
   border-radius: 14px;
